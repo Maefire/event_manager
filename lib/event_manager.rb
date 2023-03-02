@@ -97,9 +97,6 @@ csv_contents.each do |row|
   homephone = clean_phone_number(row[:homephone])
   next if homephone.nil?
 
-  # reg_date_hour = registration_hour(row[:regdate])
-
   form_letter = erb_template.result(binding)
-  # puts "#{reg_date_hour}"
-  # save_thank_you_letter(id, form_letter)
+  save_thank_you_letter(id, form_letter)
 end
